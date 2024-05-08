@@ -1,0 +1,55 @@
+.welcome {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    &__box {
+        max-width: 582px;
+    }
+
+    &__title {
+        font-family: 'Archivo Black';
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 70px;
+        color: #ffffff;
+        text-align: left;
+        @include mobile {
+            font-size: 32px;
+            line-height: 120%
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 186%;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 24px;
+    }
+
+    &__btn {
+        border-radius: 4px;
+        width: 204px;
+        height: 58px;
+        background: #5454d4;
+        color: white;
+        margin-top: 50px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {
+        img {
+            width: 655px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.contacts {
+    padding-top: 239px;
+    @include tablet-small {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 79px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        margin-top: 160px;
+        margin-bottom: 50px;
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        max-width: 826px;
+        font-family: 'Archivo Black';
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 70px;
+        color: #ffffff;
+
+        @include mobile {
+            font-size: 32px;
+            line-height: 120%
+        }
+    }
+
+    &__btn {
+        padding: 16px 49px;
+        border-radius: 5px;
+        background: #5454d4;
+        color: white;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

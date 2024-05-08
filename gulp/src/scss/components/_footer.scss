@@ -1,0 +1,64 @@
+.footer {
+	padding: 239px 0 100px 0;
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include tablet-small {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+	&__logo {
+		display: inline-flex;
+		gap: 8px;
+		align-items: center;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 140%;
+		color: #ffffff;
+
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&__ul {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		@include tablet {
+			flex-direction: column;
+			justify-content: center;
+			margin: 40px;
+		}
+	}
+
+	&__a {
+		font-family: 'Nunito Sans';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 25px;
+		color: rgba(255, 255, 255, 0.7);
+		transition: var(--transition);
+		&:hover {
+			color: #5454d4;
+		}
+
+		@include tablet {
+			color: var(--c-text-white);
+		}
+	}
+	.copyright {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 237%;
+		text-align: right;
+		color: rgba(255, 255, 255, 0.7);
+	}
+}

@@ -1,0 +1,48 @@
+.container {
+    .about{
+        &__row {
+            display: flex;
+            margin-bottom: 50px;
+            margin-top: 150px;
+            
+            @include tablet-small {
+                flex-direction: column;
+            }
+        }
+        &__title {
+            max-width: 588px;
+            font-family: 'Archivo Black';
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 70px;
+            color: #ffffff;
+            @include mobile {
+                font-size: 32px;
+                line-height: 120%
+            }
+        }
+        
+        &__desc {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 186%;
+            letter-spacing: -0.03em;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        &__img {
+            position: relative;
+        }
+        &__play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 124px;
+            @include tablet-small {
+                max-width: 40px;
+                padding: auto;
+            }
+        }
+    }
+
+}

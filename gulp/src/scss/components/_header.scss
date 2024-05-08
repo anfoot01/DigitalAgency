@@ -1,0 +1,112 @@
+.header {
+	padding: 40px 0 23px 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__btn {
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__logo {
+		display: inline-flex;
+		gap: 8px;
+		align-items: center;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 140%;
+		color: #FFFFFF;
+
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&__backdrop {
+		background: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		transform: translateX(120%);
+		display: none;
+		transition: var(--transition);
+		opacity: 0;
+
+		@include tablet {
+			display: block;
+		}
+
+		&._active {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	&__ul {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		z-index: 9;
+
+		@include tablet {
+			z-index: 9;
+			position: fixed;
+			width: 70%;
+			height: 100%;
+			flex-direction: column;
+			left: 0;
+			top: 0;
+			background: #333333;
+			align-items: center;
+			justify-content: center;
+			transform: translateX(-120%);
+			transition: var(--transition);
+		}
+
+		&._active {
+			transform: translateX(0);
+		}
+
+		.icon-close {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			color: var(--c-text-white);
+		}
+	}
+
+	&__a {
+		font-family: 'Nunito Sans';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 25px;
+		color: rgba(255, 255, 255, 0.7);
+		transition: var(--transition);
+		&.is-active, &:hover {
+			color: #5454D4;
+		}
+
+		@include tablet {
+			color: var(--c-text-white);
+		}
+	}
+}
+
+.icon-menu,
+.icon-close {
+	cursor: pointer;
+	display: none;
+
+	@include tablet {
+		display: inline-block;
+	}
+}
